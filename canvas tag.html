@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas Rectangle</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script>
+        // Get the canvas element
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Draw a rectangle
+        ctx.fillStyle = "#FF0000"; // Red color
+        ctx.fillRect(50, 50, 200, 100); // (x, y, width, height)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO-DO App</title>
+  <style>
+    /* Add your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #todo-list {
+      margin-top: 20px;
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .todo-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .todo-item .title {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <input type="text" id="new-item" placeholder="Add new item">
+    <button onclick="addItem()">Add</button>
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('todoApp', [])
+      .controller('TodoController', function() {
+        var vm = this;
+        vm.todoItems = [];
+        vm.addItem = function() {
+          var newItemInput = document.getElementById('new-item');
+          var newItemTitle = newItemInput.value.trim();
+          if (newItemTitle === '') return;
+
+          var newItem = { title: newItemTitle, completed: false };
+          vm.todoItems.push(newItem);
+          newItemInput.value = '';
+        };
+      });
+  </script>
+</body>
+</html>

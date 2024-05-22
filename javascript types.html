@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Embedding Methods</title>   
+</head>
+<body>
+    <h2>JavaScript Embedding Methods</h2>
+
+    <!-- Method 1: Inline JavaScript -->
+    <h3>Method 1: Inline JavaScript</h3>
+    <p>This is an example of inline JavaScript:</p>
+    <button onclick="alert('Hello from inline JavaScript!')">Click me</button>
+
+    <!-- Method 2: Internal JavaScript -->
+    <h3>Method 2: Internal JavaScript</h3>
+    <p>This is an example of internal JavaScript:</p>
+    <script>
+        function internalFunction() {
+            alert('Hello from internal JavaScript!');
+        }
+    </script>
+    <button onclick="internalFunction()">Click me</button>
+
+    <!-- Method 3: External JavaScript -->
+    <h3>Method 3: External JavaScript</h3>
+    <p>This is an example of external JavaScript:</p>
+    <script src="javascript types.js"></script>
+    <button onclick="externalFunction()">Click me</button>
+
+</body>
+</html>

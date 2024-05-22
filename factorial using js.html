@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+    <h2>Factorial Calculator</h2>
+
+    <script>
+        // Function to calculate factorial
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+
+        // Prompt user to enter a number
+        var num = prompt("Enter a number:");
+
+        // Parse input to integer and calculate factorial
+        var number = parseInt(num);
+        var result = factorial(number);
+
+        // Display the factorial
+        if (!isNaN(result)) {
+            alert("Factorial of " + number + " is: " + result);
+        } else {
+            alert("Invalid input. Please enter a valid number.");
+        }
+    </script>
+</body>
+</html>

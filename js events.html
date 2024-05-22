@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Demo</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="clickBox">Click Me</div>
+    <div class="box" id="loadBox">Page Loaded</div>
+    <input type="text" id="keyUpInput" placeholder="Type something...">
+    <div class="box" id="hoverBox">Mouse Hover</div>
+
+    <script>
+        // onclick event
+        document.getElementById('clickBox').onclick = function() {
+            alert('Clicked!');
+        };
+
+        // onload event
+        window.onload = function() {
+            document.getElementById('loadBox').innerText = "Page Loaded";
+        };
+
+        // onkeyup event
+        document.getElementById('keyUpInput').onkeyup = function(event) {
+            alert('Key pressed: ' + event.key);
+        };
+
+        // onmouseover event
+        document.getElementById('hoverBox').onmouseover = function() {
+            this.style.backgroundColor = 'lightgreen';
+        };
+
+        // onmouseleave event (alternative to onmouseout)
+        document.getElementById('hoverBox').onmouseleave = function() {
+            this.style.backgroundColor = 'lightblue';
+        };
+    </script>
+</body>
+</html>
